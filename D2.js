@@ -2,25 +2,47 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let num1 = 5;
+let num2 = 10;
+if (num1 > num2) {
+  console.log("Il primo numero è maggiore del secondo");
+} else console.log("Il secondo numero è maggiore del primo");
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numPrompt = parseInt(prompt("Inserisci il numero"));
+if (num1 === numPrompt) console.log("equal");
+else console.log("not equal");
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numPrompt2 = parseInt(prompt("Inserisci il numero"));
+
+if (numPrompt2 % 5 == 0) {
+  console.log("divisibile per 5");
+} else console.log("non divisibile per 5");
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numPrompt3 = parseInt(prompt("Inserisci il primo numero"));
+let numPrompt4 = parseInt(prompt("Inserisci il secondo numero"));
+let somma = numPrompt3 + numPrompt4;
+let sottrazione = numPrompt3 - numPrompt4;
+if (numPrompt3 == 8 || numPrompt4 == 8) {
+  console.log("Uno dei due numeri equivale a 8");
+} else console.log("Nessuno dei due numeri equivale a 8");
+if (somma == 8) {
+  console.log("L'addizione tra i numeri equivale a 8");
+}
+if (sottrazione == 8) {
+  console.log("La sottrazione tra i numeri equivale a 8");
+} else console.log("Nè l'addizione nè la sottrazione equivalgono a 8");
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -28,14 +50,31 @@
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart = parseInt(prompt("Inserire il totale in €"));
+const spedizione = 10;
+if (totalShoppingCart > 50) {
+  totalShoppingCart = totalShoppingCart;
+  console.log("Il totale ammonta a", totalShoppingCart, "€");
+} else {
+  totalShoppingCart = totalShoppingCart + spedizione;
+  console.log("Il totale ammonta a", totalShoppingCart, "€");
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart2 = parseInt(prompt("Inserire il totale in €"));
+let sconto = (totalShoppingCart2 * 20) / 100;
+totalShoppingCart2 = totalShoppingCart2 - sconto;
+if (totalShoppingCart2 > 50) {
+  totalShoppingCart2 = totalShoppingCart2;
+  console.log("Il totale ammonta a", totalShoppingCart2, "€");
+} else {
+  totalShoppingCart2 = totalShoppingCart2 + spedizione;
+  console.log("Il totale ammonta a", totalShoppingCart2, "€");
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -43,66 +82,102 @@
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let a = parseInt(prompt("Inserisci il primo numero"));
+let b = parseInt(prompt("Inserisci il secondo numero"));
+let c = parseInt(prompt("Inserisci il terzo numero"));
+if (a > b && a > c && b > c) {
+  let primo = a;
+  let secondo = b;
+  let terzo = c;
+} else if (a > b && a > c && c > b) {
+  primo = a;
+  secondo = c;
+  terzo = b;
+} else if (b > a && b > c && a > c) {
+  primo = b;
+  secondo = a;
+  terzo = c;
+} else if (b > a && b > c && c > a) {
+  primo = b;
+  secondo = c;
+  terzo = a;
+} else if (c > a && c > b && a > b) {
+  primo = c;
+  secondo = a;
+  terzo = b;
+} else if (c > a && c > b && b > a) {
+  primo = c;
+  secondo = b;
+  terzo = a;
+}
+console.log("L'ordine decresecente è il seguente", primo, secondo, terzo);
 
-/* ESERCIZIO 8
-  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
+/*
+ESERCIZIO 8
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let dato = prompt("Inserire il dato");
+console.log(typeof dato);
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numEx = parseInt(prompt("Inserire il numero"));
+if (numEx % 2 == 0) {
+  console.log("Il numero è pari");
+} else console.log("Il numero è dispari");
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
-  let val = 7
-  if (val < 10) {
-      console.log("Meno di 10");
-    } else if (val < 5) {
-      console.log("Meno di 5");
-    } else {
-      console.log("Uguale a 10 o maggiore");
-    }
+ 
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 7;
+if (val < 10) {
+  console.log("Meno di 10");
+} else if (val < 5) {
+  console.log("Meno di 5");
+} else if (val >= 10) {
+  console.log("Uguale a 10 o maggiore");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
 const me = {
-  name: 'John',
-  lastName: 'Doe',
-  skills: ['javascript', 'html', 'css'],
-}
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+  name: "John",
+  lastName: "Doe",
+  skills: ["javascript", "html", "css"],
+  city: "Toronto",
+};
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+console.log(me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop();
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let array = [];
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(array);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+array.fill(100, 10);
+console.log(array);
